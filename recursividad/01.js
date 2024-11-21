@@ -54,4 +54,4 @@ function imprimirNumeros(n) {
     imprimirNumeros(n - 1);
 }
 
-imprimirNumeros(100); // <--- imprime los números del 100 al 0
+// imprimirNumeros(100); // <--- imprime los números del 100 al 0
