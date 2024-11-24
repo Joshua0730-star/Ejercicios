@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    font-family: Montserrat, 'sans-serif';
+    --bg-primary-color-card: #ffffff;
+    --bg-color-img: #ACACAC;
+    --primary-color: #333333;
+}
+
+
+.container_card{
+    width: 460px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    color: var(--primary-color);
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.up_card {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    gap: 16px;
+    font-size: 28px;
+    font-weight: 500;
+    flex-direction: column;
+}
+
+
+.img_user{
+    width: 160px;
+    height: 160px;
+
+    background-color: var(--bg-color-img);
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+
+.down_card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-settings{
+    width: 66px;
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    border-radius: 50%;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.button_container-box {
+    width: 260px;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: space-between; /* Cambia según el estado */
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-add {
+    width: 60px;
+    z-index: 1;
+    left: 10px;
+    top: 50%;
+    transition: all 0.3s ease;
+}
+
+.button {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 80px); /* Resta espacio del ícono */
+    background-color: transparent;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    color: var(--bg-primary-color-card);
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
