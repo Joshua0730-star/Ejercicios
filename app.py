@@ -7,4 +7,4 @@ def ordenar(arr):
   return arr
 
 
-ordenar(my_array)
+print(ordenar(my_array))
