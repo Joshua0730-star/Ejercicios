@@ -8,3 +8,18 @@ def ordenar(arr):
 
 
 print(ordenar(my_array))
+
+
+# probando objetos en py
+user = {
+  'name': 'joshua',
+  'age': 17,
+  'job': 'developer'
+}
+
+
+name = user['name']
+user['hobbies'] = ['programing', 'soccer', 'music', 'read']
+
+print(name)
+print(user['hobbies'])
