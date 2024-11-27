@@ -1,25 +1,9 @@
-# ordenando en listas
+# algoritmo de utlimo número
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-my_array = [10, 7, 4, 2, 6, 5, 12]
+def array(arr):
+    for i in range(len(arr)):
+        elemento_final = arr[len(arr) - i - 1]
+        print(elemento_final)        
 
-def ordenar(arr):
-  arr.sort()
-  return arr
-
-
-print(ordenar(my_array))
-
-
-# probando objetos en py
-user = {
-  'name': 'joshua',
-  'age': 17,
-  'job': 'developer'
-}
-
-
-name = user['name']
-user['hobbies'] = ['programing', 'soccer', 'music', 'read']
-
-print(name)
-print(user['hobbies'])
+array(numbers) #Llamando a la funcion
