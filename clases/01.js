@@ -1,4 +1,4 @@
-// clases ----> plantillas de objetos 
+// clases ----> plantillas de objetos , Contribucion para MoureDev
 
 
 class User {
