@@ -59,7 +59,7 @@ console.log(inBox([
 
 // testing 
 
-// let arr = ['hola', 'como', 'estas', 'crack'];
+// let arr = ['hola', 'como', 'estás', 'crack'];
 
 // let ultimo = arr[- 1];
 
