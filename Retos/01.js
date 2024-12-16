@@ -1,28 +1,11 @@
 function drawRace(indices, length) {
-    let lanes = '';
-    
+    return indices.map((position, idx) => {
+        let lane = Array(length).fill('~');
+        position = position < 0 ? position + length : position;
 
-    for (let i = 0; i < indices.length; i++) {
-        let spaces = ' '.repeat(indices.length - i - 1);
-        let currentElm = indices[i];
-        let snow = '~';
-        let currentText = '';
-
-        if (currentElm === 0) {
-            lanes += spaces + snow.repeat(length) + ` /${i + 1}` + '\n';
-            continue;
-        }
-
-        currentText = snow.repeat(length).split('');
-
-        if(currentElm < 0){
-            currentText[currentElm + length] = 'r';
-        }
-        currentText[currentElm] = 'r';
-        currentText = spaces + currentText.join('') + ` /${i + 1}` + '\n';
-        lanes += currentText;
-    }
-    return lanes;
+        if(position > 0 && position <= length) lane[position] = 'r';
+        return ' '.repeat(indices.length - idx - 1) + lane.join('') + ` /${idx + 1}`
+    }).join('\n')
 }
 
 
@@ -51,9 +34,3 @@ console.log(drawRace([3, 7, -2], 12))
  ~~~~~~~r~~~~ /2
 ~~~~~~~~~~r~ /3
 */
-// let arr = [1, 4, 7, 5];
-
-// const lastIdx = arr.length - 1;
-// console.log(lastIdx);
-
-
