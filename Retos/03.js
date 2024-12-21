@@ -247,28 +247,45 @@ const palabras = ["hola", "mundo", "javascript"];
 
 // console.log(String.fromCharCode(97)); <--- retorna el caracter que tiene almcenado en ese indice
 
-function cifradoCesar(arr) {
-    // const abecedario = [
-    //     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    // ];
-    return arr.map(words => {
-        let changeChar = '';
-        for (let i = 0; i < words.length; i++) {
-            let currentChar = words[i];
+// function cifradoCesar(arr) {
+//     // const abecedario = [
+//     //     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+//     // ];
+//     return arr.map(words => {
+//         let changeChar = '';
+//         for (let i = 0; i < words.length; i++) {
+//             let currentChar = words[i];
 
-            let changeNumber = words.charCodeAt(i);
-            currentChar = String.fromCharCode(changeNumber + 3); // el numero de ese caracter sumado 3 posiciones adelante en la colección
-            changeChar += currentChar;
-        }
-        return changeChar
-    });
-}
+//             let changeNumber = words.charCodeAt(i);
+//             currentChar = String.fromCharCode(changeNumber + 3); // el numero de ese caracter sumado 3 posiciones adelante en la colección
+//             changeChar += currentChar;
+//         }
+//         return changeChar
+//     });
+// }
 
-// length
+// // length
 
-console.log(cifradoCesar(palabras));
+// console.log(cifradoCesar(palabras));
 
 
 //String.fromCharCode() <--- almacen de caracteres , desde el 65 esta la "A"
 
 // Output: ["krod", "pxqgr", "mdydvfulsw"]
+
+
+
+/* 11)
+Descripción: Dado un array multidimensional de números, devuelve un nuevo array que contenga todos los números planos (sin importar la profundidad) multiplicados por 2.
+ */
+
+
+const numeros = [[1, 2, [3]], 4, [5, [6, 7]]];
+
+function planos(arr){
+  return arr.flat(Infinity).map(num => num * 2);
+}
+
+console.log(planos(numeros));
+
+// Output: [2, 4, 6, 8, 10, 12, 14]
